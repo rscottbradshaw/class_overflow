@@ -32,6 +32,10 @@ end
 
 gem 'guard-rspec', require: false
 gem 'simplecov', :require => false, :group => :test
+gem 'capybara', :group => :test
+gem 'factory_girl_rails', group: :test
+gem 'database_cleaner', group: :test
+gem 'simple_form'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
