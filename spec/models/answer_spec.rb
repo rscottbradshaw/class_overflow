@@ -12,8 +12,6 @@ RSpec.describe Answer, :type => :model do
   it 'validates the presence of responder' do
     expect(answer.errors).to have_key(:responder)
   end
-
-  
 end
 
 

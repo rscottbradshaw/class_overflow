@@ -6,16 +6,16 @@ class AnswersController < ApplicationController
   end
 
   def new
-    @answers = Answer.new
-    respond_with @answers
+    @answer = Answer.new
+    respond_with @answer
   end
 
   def create
-    @answers = Answer.new(question_params)
+    @answer = Answer.new(answer_params)
 
-    @answers.save
+    @answer.save
     flash[:notice] = 'Answer Added'
-    respond_with @answers, location: answers_path
+    respond_with @answer, location: answers_path
     # above 3 lines same as commented below
     # if @answers.save
     #   redirect_to answers_path, notice: 'Answer Added'
@@ -25,7 +25,7 @@ class AnswersController < ApplicationController
   end
 
   private
-  def question_params
+  def answer_params
     params.require(:answer).permit :title, :content
   end
 end
