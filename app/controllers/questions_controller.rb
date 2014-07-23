@@ -16,6 +16,7 @@ class QuestionsController < ApplicationController
     @question.save
     flash[:notice] = 'Question Added'
     respond_with @question, location: questions_path
+    # above 3 lines same as commented below
     # if @question.save
     #   redirect_to questions_path, notice: 'Question Added'
     # else
